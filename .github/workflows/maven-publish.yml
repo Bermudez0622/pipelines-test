@@ -40,9 +40,9 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
         api_context_path: ${{ secrets.API_CONTEXT_PATH }}
         
-    - name: Release
-      uses: softprops/action-gh-release@v1
+    - uses: "marvinpinto/action-automatic-releases@latest"
       with:
-        tag_name: latest
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        prerelease: false
         files: |
           *.jar
