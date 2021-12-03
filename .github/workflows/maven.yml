@@ -24,3 +24,5 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      env:
+        api_context_path: ${{ secrets.API_CONTEXT_PATH }}
