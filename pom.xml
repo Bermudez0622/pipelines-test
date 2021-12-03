@@ -46,4 +46,13 @@
 		</plugins>
 	</build>
 
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Bermudez0622 Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/Bermudez0622/pipelines-test</url>
+		</repository>
+	</distributionManagement>
+
+
 </project>
