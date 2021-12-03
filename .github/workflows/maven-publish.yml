@@ -39,3 +39,13 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ github.token }}
         api_context_path: ${{ secrets.API_CONTEXT_PATH }}
+        
+    - uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest"
+        prerelease: true
+        title: "Development Build"
+        files: |
+          LICENSE.txt
+          *.jar
